@@ -1,16 +1,19 @@
 using Lofelt.NiceVibrations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FollowSwords : MonoBehaviour
 {
     public Transform parentSword;
     public Transform scaleCapsule;
-    public FlightControll flightControll;
+    public FlightControl flightControl;
+    public TextMeshProUGUI powerText;
     void Start()
     {
-        flightControll=FindObjectOfType<FlightControll>();
+        flightControl=FindObjectOfType<FlightControl>();
     }
 
     // Update is called once per frame
@@ -28,12 +31,14 @@ public class FollowSwords : MonoBehaviour
             {
                 
                 scaleCapsule.localScale = new Vector3(scaleCapsule.localScale.x, scaleCapsule.localScale.y + 0.006f, scaleCapsule.localScale.z);
-                flightControll.power += 0.022f;
+                flightControl.power += 0.022f;
+                powerText.text = MathF.Round (flightControl.power * 28).ToString();
             }
             else
             {
                 
-                flightControll.power += 0.022f;
+                flightControl.power += 0.022f;
+                powerText.text = MathF.Round(flightControl.power * 28).ToString();
             }
             
 

@@ -12,11 +12,11 @@ public class SwordShake : MonoBehaviour
     public float shakeSpeed;
     public float tempSpeed;
     public PlayerControll playerControll;
-    FlightControll lightControll;
+    FlightControl lightControll;
     public Transform landingPart1, landingPart2,capsule;
     void Start()
     {
-        lightControll=FindObjectOfType<FlightControll>();
+        lightControll=FindObjectOfType<FlightControl>();
         playerControll=FindObjectOfType<PlayerControll>();
         parentObj=transform.parent.transform;
 

@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FlightControll : MonoBehaviour
+public class FlightControl : MonoBehaviour
 {
     public float power;
     public Transform fuelY;
-    PlayerControll playerControll;
+    PlayerControll playerControl;
     public GameObject cam1, cam2;
     public GameObject fx1, fx2;
     UiManager uiManager;
     void Start()
     {
-        playerControll=FindObjectOfType<PlayerControll>();
+        playerControl=FindObjectOfType<PlayerControll>();
         uiManager=FindObjectOfType<UiManager>();
     }
 
@@ -28,7 +28,7 @@ public class FlightControll : MonoBehaviour
         cam1.SetActive(false);
         cam2.SetActive(true);
         power *= 100;
-        playerControll.transform.DOMoveY(power,8).SetEase(Ease.InOutFlash);
+        playerControl.transform.DOMoveY(power,8).SetEase(Ease.InOutFlash);
         fuelY.DOScaleY(0.000f, 8).OnComplete(() =>
         { 
         uiManager.FinishPanelOpen();

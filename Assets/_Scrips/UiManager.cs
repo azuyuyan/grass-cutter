@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
 {
@@ -15,11 +16,13 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI recordScoreText;
     public GameObject finishParticle;
     public GameObject finishPanel;
+    public int level;
     void Start()
     {
         record = PlayerPrefs.GetInt("record", record);
         playerControll =FindObjectOfType<PlayerControll>();
         Invoke("GetUiObjectsFromStart", 0.3f);
+        level = PlayerPrefs.GetInt("level");
     }
 
     // Update is called once per frame
@@ -52,6 +55,21 @@ public class UiManager : MonoBehaviour
             record=score;
             PlayerPrefs.SetInt("record",record);
             recordScoreText.text = record.ToString();
+        }
+    }
+    public void NextLevel()
+    {
+        if (level < 4)
+        {
+            level++;
+            PlayerPrefs.SetInt("level", level);
+            SceneManager.LoadScene(level);
+        }
+        else
+        {
+            level = 0;
+            PlayerPrefs.SetInt("level", level);
+            SceneManager.LoadScene(level);
         }
     }
 }
