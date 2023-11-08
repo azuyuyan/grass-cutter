@@ -10,6 +10,7 @@ public class SkyBoxChanger : MonoBehaviour
     {
         r=Random.Range(0,materials.Count);
         RenderSettings.skybox = materials[r];
+        
     }
 
     // Update is called once per frame

@@ -14,16 +14,21 @@ public class SwordShake : MonoBehaviour
     public PlayerControll playerControll;
     FlightControl lightControll;
     public Transform landingPart1, landingPart2,capsule;
+    void Awake()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 144;
+    }
     void Start()
     {
         lightControll=FindObjectOfType<FlightControl>();
         playerControll=FindObjectOfType<PlayerControll>();
         parentObj=transform.parent.transform;
-
+        
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         tempSpeed = playerControll.rotateSpeed;
         if (playerControll.isFinih == false)
@@ -31,11 +36,15 @@ public class SwordShake : MonoBehaviour
             transform.localPosition = new Vector3(transform.localPosition.x + joystick.Horizontal * Time.deltaTime * shakeSpeed, transform.localPosition.y, 0);
         }
         
-        transform.Rotate(0,tempSpeed,0);
+       
 
         var pos = transform.localPosition;
         pos.x = Mathf.Clamp(transform.localPosition.x, -4, 4);
         transform.localPosition = pos;
+    }
+    private void FixedUpdate()
+    {
+        transform.Rotate(0, tempSpeed, 0);
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: -0.003887833, y: -0.39994577, z: -0.0017821358, w: 0.9165289}
   m_LocalPosition: {x: 81.507484, y: -0.49551892, z: -55.076153}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1767274248298794841}
   m_Father: {fileID: 0}
@@ -155,11 +156,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f2e32c548530c174b961aa335d7a0065, type: 3}
   m_PrefabInstance: {fileID: 2237207016981850290}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1767274248298794841 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f2e32c548530c174b961aa335d7a0065, type: 3}
-  m_PrefabInstance: {fileID: 2237207016981850290}
-  m_PrefabAsset: {fileID: 0}
 --- !u!65 &2237207016252751330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -186,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   originalMesh: {fileID: -462981019419857548, guid: f2e32c548530c174b961aa335d7a0065, type: 3}
-  offsetValue: 1
+  offsetValue: 3
   offsetVector: {x: 0, y: 0, z: 0}
   numberOfStacks: 7
 --- !u!114 &2237207016252751331
@@ -293,7 +289,7 @@ MonoBehaviour:
   async: 1
   downsampleSteps: 3
   registeredPaintableTexture: {fileID: 2237207016252751333}
-  cooldown: -102.14714
+  cooldown: -104.7219
   currentReader:
     dirty: 0
     requested: 0
@@ -352,3 +348,8 @@ MonoBehaviour:
   onOutside:
     m_PersistentCalls:
       m_Calls: []
+--- !u!4 &1767274248298794841 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f2e32c548530c174b961aa335d7a0065, type: 3}
+  m_PrefabInstance: {fileID: 2237207016981850290}
+  m_PrefabAsset: {fileID: 0}

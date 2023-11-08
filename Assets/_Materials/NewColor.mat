@@ -2,17 +2,19 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: NewColor
   m_Shader: {fileID: 4800000, guid: bf1b67d8223379749a0a88d47d0a7154, type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords:
+  - USE_RT
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -75,21 +77,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FadeDistanceEnd: 176.65
-    - _FadeDistanceStart: 105.78
+    - _FadeDistanceEnd: 161.2
+    - _FadeDistanceStart: 69.8
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _GrassCut: 0
     - _GrassSaturation: 6.65
     - _GrassShading: 0.283
-    - _GrassThinness: 1.2
-    - _GrassThinnessIntersection: 0.26
+    - _GrassThinness: 1.38
+    - _GrassThinnessIntersection: 0.73
     - _Metallic: 0
     - _Mode: 0
     - _NoisePower: 3.52
@@ -100,20 +103,20 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TilingN1: 64.7
+    - _TilingN1: 38.52
     - _TilingN2: 0.27
-    - _TilingN3: 0.44
+    - _TilingN3: 1.89
     - _UVSec: 0
     - _UseAmbientLight: 0
     - _UsePR: 0
-    - _UseRT: 0
+    - _UseRT: 1
     - _UseShadow: 0
     - _UseShadowCast: 0
     - _UseTP: 0
     - _UseVP: 0
     - _UseVR: 0
     - _UseWC: 0
-    - _WindForce: 0.39
+    - _WindForce: 0.48
     - _WindMovement: 1.09
     - _WorldRotation: 0
     - _WorldScale: 10
