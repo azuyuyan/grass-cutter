@@ -33,7 +33,7 @@ public class ReadColorTest : MonoBehaviour
     }
     public void Test()
     {
-        print("ColorTest");
+       
         quadCounterEvent.Range = new Vector2(0,quadCounterEvent.Ratio+0.007f) ;
         followSwords.ScaledCap();
         GameObject go = Instantiate(prefab, insPos);

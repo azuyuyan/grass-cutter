@@ -32,6 +32,10 @@ public class SwordShake : MonoBehaviour
         }
         
         transform.Rotate(0,tempSpeed,0);
+
+        var pos = transform.localPosition;
+        pos.x = Mathf.Clamp(transform.localPosition.x, -4, 4);
+        transform.localPosition = pos;
     }
     private void OnTriggerEnter(Collider other)
     {
