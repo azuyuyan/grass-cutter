@@ -59,7 +59,7 @@ public class UiManager : MonoBehaviour
     }
     public void NextLevel()
     {
-        if (level < 4)
+        if (level < 5)
         {
             level++;
             PlayerPrefs.SetInt("level", level);
@@ -67,7 +67,7 @@ public class UiManager : MonoBehaviour
         }
         else
         {
-            level = 0;
+            level = 1;
             PlayerPrefs.SetInt("level", level);
             SceneManager.LoadScene(level);
         }
